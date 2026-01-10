@@ -11,111 +11,87 @@ body {
   line-height: 1.6;
 }
 
-/* ===== NAVBAR ===== */
-header {
-  position: sticky;
-  top: 0;
-  background: #020617;
-  z-index: 1000;
-}
-
-.navbar {
-  max-width: 1100px;
-  margin: auto;
-  padding: 16px 24px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.logo {
-  font-size: 1.4rem;
-  font-weight: 600;
-}
-
-.navbar ul {
-  list-style: none;
-  display: flex;
-  gap: 22px;
-}
-
-.navbar a {
-  text-decoration: none;
-  color: #cbd5f5;
-  font-weight: 500;
-  transition: color 0.2s ease;
-}
-
-.navbar a:hover {
-  color: #38bdf8;
-}
-
-/* ===== HERO ===== */
 .hero {
-  min-height: 90vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   text-align: center;
-  background: radial-gradient(circle at top, #020617, #0f172a);
+  padding: 80px 20px;
 }
 
 .hero h1 {
-  font-size: 3rem;
-  margin-bottom: 10px;
+  font-size: 2.8rem;
+}
+
+.hero span {
+  color: #38bdf8;
 }
 
 .hero p {
-  max-width: 600px;
-  color: #94a3b8;
+  margin: 15px 0;
+  font-size: 1.1rem;
+  opacity: 0.9;
+}
+
+.buttons {
+  margin-top: 20px;
 }
 
 .btn {
-  margin-top: 24px;
-  padding: 12px 28px;
+  display: inline-block;
+  padding: 10px 18px;
+  margin: 5px;
   background: #38bdf8;
-  color: #020617;
-  border-radius: 8px;
+  color: #0f172a;
   text-decoration: none;
+  border-radius: 6px;
   font-weight: 600;
 }
 
-/* ===== SECTIONS ===== */
+.btn.outline {
+  background: transparent;
+  border: 1px solid #38bdf8;
+  color: #38bdf8;
+}
+
 .section {
+  padding: 60px 20px;
   max-width: 900px;
   margin: auto;
-  padding: 80px 24px;
 }
 
 .section h2 {
+  font-size: 2rem;
   margin-bottom: 20px;
   color: #38bdf8;
 }
 
-.light {
+.section.gray {
   background: #020617;
 }
 
-/* ===== SKILLS GRID ===== */
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-  gap: 16px;
+.skills span {
+  display: inline-block;
+  background: #1e293b;
+  padding: 8px 14px;
+  margin: 6px;
+  border-radius: 20px;
+  font-size: 0.9rem;
 }
 
 .card {
-  background: #020617;
-  padding: 16px;
+  background: #1e293b;
+  padding: 20px;
   border-radius: 10px;
-  text-align: center;
-  border: 1px solid #1e293b;
+  margin-bottom: 15px;
 }
 
-/* ===== FOOTER ===== */
+.company {
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
 footer {
   text-align: center;
-  padding: 20px;
+  padding: 25px;
   background: #020617;
-  color: #64748b;
+  font-size: 0.9rem;
+  opacity: 0.7;
 }
