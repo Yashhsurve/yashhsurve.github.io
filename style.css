@@ -1,97 +1,207 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Segoe UI", sans-serif;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Yash Surve | Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
 
-body {
-  background: #0f172a;
-  color: #e5e7eb;
-  line-height: 1.6;
-}
+  <div class="bg-layer">
+    <div class="orb orb1" id="o1"></div>
+    <div class="orb orb2" id="o2"></div>
+    <div class="orb orb3" id="o3"></div>
+    <div class="cursor-glow" id="glow"></div>
+  </div>
 
-.hero {
-  text-align: center;
-  padding: 80px 20px;
-}
+  <nav id="navbar">
+    <div class="nav-logo">Yash Surve</div>
+    <div class="nav-links">
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#experience">Experience</a>
+      <a href="#education">Education</a>
+      <a href="#certifications">Certifications</a>
+      <a href="#contact" class="nav-cta">Contact</a>
+    </div>
+  </nav>
 
-.hero h1 {
-  font-size: 2.8rem;
-}
+  <main class="content">
 
-.hero span {
-  color: #38bdf8;
-}
+    <!-- HERO -->
+    <section class="hero">
+      <div class="eyebrow"><span></span> Open to internships 2025</div>
+      <h1>Building with data,<br>curious by <em>nature.</em></h1>
+      <p class="hero-sub">
+        Computer Engineering student at DY Patil Technical Campus, Pune —
+        exploring Python, SQL, and data analytics to turn raw data into real decisions.
+      </p>
+      <div class="hero-btns">
+        <a href="mailto:surveyash2005@gmail.com" class="btn-primary">Get in touch</a>
+        <a href="https://www.linkedin.com/in/yashhsurve" target="_blank" class="btn-outline">LinkedIn</a>
+        <a href="https://yashhsurve.github.io/" target="_blank" class="btn-outline">My Website</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat"><span class="stat-num">1</span><span class="stat-label">Internship</span></div>
+        <div class="stat"><span class="stat-num">3</span><span class="stat-label">Certifications</span></div>
+        <div class="stat"><span class="stat-num">2nd yr</span><span class="stat-label">BE Student</span></div>
+        <div class="stat"><span class="stat-num">Pune</span><span class="stat-label">Maharashtra</span></div>
+      </div>
+    </section>
 
-.hero p {
-  margin: 15px 0;
-  font-size: 1.1rem;
-  opacity: 0.9;
-}
+    <!-- ABOUT -->
+    <section id="about">
+      <div class="section-label">About</div>
+      <h2 class="section-title">Who I am</h2>
+      <p class="section-sub">A brief look at my background and what drives me.</p>
+      <div class="about-grid">
+        <div class="glass-card">
+          <h4>Background</h4>
+          <p>Pursuing BE in Computer Engineering at DY Patil Technical Campus, Pune, after my Diploma from Sahyadri Polytechnic, Sawarde.</p>
+        </div>
+        <div class="glass-card">
+          <h4>What I'm building</h4>
+          <p>Strengthening my Python, SQL, and Power BI skills — working toward a career in data analytics and data science.</p>
+        </div>
+        <div class="glass-card">
+          <h4>Work experience</h4>
+          <p>Interned at Persistent Technology as a WordPress Developer, applying concepts to live client web projects.</p>
+        </div>
+        <div class="glass-card">
+          <h4>My goal</h4>
+          <p>Use data to drive meaningful decisions — as a data analyst or data scientist in a collaborative team environment.</p>
+        </div>
+      </div>
+    </section>
 
-.buttons {
-  margin-top: 20px;
-}
+    <!-- SKILLS -->
+    <section id="skills">
+      <div class="section-label">Skills</div>
+      <h2 class="section-title">What I work with</h2>
+      <p class="section-sub">Tools and technologies I've been building on.</p>
+      <div class="skills-wrap">
+        <span class="skill">Python</span>
+        <span class="skill">SQL</span>
+        <span class="skill">Power BI</span>
+        <span class="skill">Data Analysis</span>
+        <span class="skill">WordPress</span>
+        <span class="skill">HTML &amp; CSS</span>
+        <span class="skill">Microsoft AI</span>
+        <span class="skill">Web Design</span>
+        <span class="skill dim">Problem Solving</span>
+        <span class="skill dim">Communication</span>
+      </div>
+    </section>
 
-.btn {
-  display: inline-block;
-  padding: 10px 18px;
-  margin: 5px;
-  background: #38bdf8;
-  color: #0f172a;
-  text-decoration: none;
-  border-radius: 6px;
-  font-weight: 600;
-}
+    <!-- EXPERIENCE -->
+    <section id="experience">
+      <div class="section-label">Experience</div>
+      <h2 class="section-title">Where I've worked</h2>
+      <p class="section-sub">Real-world experience applying my skills.</p>
+      <div class="exp-card glass-card">
+        <div class="exp-icon">💻</div>
+        <div class="exp-body">
+          <div class="exp-header">
+            <div>
+              <div class="exp-title">WordPress Developer Intern</div>
+              <div class="exp-company">Persistent Technology · Chiplun, Maharashtra</div>
+            </div>
+            <div class="exp-date">Jun – Jul 2024</div>
+          </div>
+          <p class="exp-desc">
+            Built responsive WordPress pages and UI/UX layouts for real client projects.
+            Improved site functionality and applied web design principles in a professional environment.
+          </p>
+          <div class="exp-tags">
+            <span>WordPress</span>
+            <span>HTML</span>
+            <span>CSS</span>
+            <span>Web Design</span>
+            <span>UI/UX</span>
+          </div>
+        </div>
+      </div>
+    </section>
 
-.btn.outline {
-  background: transparent;
-  border: 1px solid #38bdf8;
-  color: #38bdf8;
-}
+    <!-- EDUCATION -->
+    <section id="education">
+      <div class="section-label">Education</div>
+      <h2 class="section-title">Academic background</h2>
+      <p class="section-sub">My formal education journey.</p>
+      <div class="edu-list">
+        <div class="edu-item glass-card">
+          <div>
+            <div class="edu-degree">BE — Computer Engineering</div>
+            <div class="edu-school">DY Patil Technical Campus, Pune</div>
+          </div>
+          <div class="edu-year">2025 – 2028</div>
+        </div>
+        <div class="edu-item glass-card">
+          <div>
+            <div class="edu-degree">Diploma — Computer Engineering</div>
+            <div class="edu-school">Sahyadri Polytechnic, Sawarde</div>
+          </div>
+          <div class="edu-year">2022 – 2025</div>
+        </div>
+        <div class="edu-item glass-card">
+          <div>
+            <div class="edu-degree">SSC — High School</div>
+            <div class="edu-school">Shree Dev Gopalkrushna Madhyamic Vidyamandir, Guhagar</div>
+          </div>
+          <div class="edu-year">2015 – 2022</div>
+        </div>
+      </div>
+    </section>
 
-.section {
-  padding: 60px 20px;
-  max-width: 900px;
-  margin: auto;
-}
+    <!-- CERTIFICATIONS -->
+    <section id="certifications">
+      <div class="section-label">Certifications</div>
+      <h2 class="section-title">What I've earned</h2>
+      <p class="section-sub">Credentials that validate my learning.</p>
+      <div class="cert-grid">
+        <div class="cert-card glass-card">
+          <div class="cert-icon">🤖</div>
+          <div>
+            <div class="cert-name">Microsoft Certified: Fundamental AI Concepts</div>
+            <div class="cert-issuer">Microsoft</div>
+          </div>
+        </div>
+        <div class="cert-card glass-card">
+          <div class="cert-icon">📊</div>
+          <div>
+            <div class="cert-name">Power BI Workshop</div>
+            <div class="cert-issuer">Workshop Certificate</div>
+          </div>
+        </div>
+        <div class="cert-card glass-card">
+          <div class="cert-icon">🐍</div>
+          <div>
+            <div class="cert-name">3 Days Python Bootcamp</div>
+            <div class="cert-issuer">Bootcamp Certificate</div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-.section h2 {
-  font-size: 2rem;
-  margin-bottom: 20px;
-  color: #38bdf8;
-}
+    <!-- CONTACT CTA -->
+    <section id="contact">
+      <div class="cta-box">
+        <h3>Let's connect</h3>
+        <p>Actively looking for internship opportunities in data analytics, data science, and web development.</p>
+        <a href="mailto:surveyash2005@gmail.com" class="btn-white">Email me →</a>
+      </div>
+    </section>
 
-.section.gray {
-  background: #020617;
-}
+    <footer>
+      <p>© 2026 Yash Surve &nbsp;·&nbsp; Built with care &nbsp;·&nbsp; Pune, Maharashtra, India</p>
+    </footer>
 
-.skills span {
-  display: inline-block;
-  background: #1e293b;
-  padding: 8px 14px;
-  margin: 6px;
-  border-radius: 20px;
-  font-size: 0.9rem;
-}
+  </main>
 
-.card {
-  background: #1e293b;
-  padding: 20px;
-  border-radius: 10px;
-  margin-bottom: 15px;
-}
-
-.company {
-  font-size: 0.9rem;
-  opacity: 0.8;
-}
-
-footer {
-  text-align: center;
-  padding: 25px;
-  background: #020617;
-  font-size: 0.9rem;
-  opacity: 0.7;
-}
+  <script src="script.js"></script>
+</body>
+</html>
