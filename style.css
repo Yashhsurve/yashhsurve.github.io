@@ -1,207 +1,573 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Yash Surve | Portfolio</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
+/* ── Reset ── */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-  <div class="bg-layer">
-    <div class="orb orb1" id="o1"></div>
-    <div class="orb orb2" id="o2"></div>
-    <div class="orb orb3" id="o3"></div>
-    <div class="cursor-glow" id="glow"></div>
-  </div>
+/* ── Base ── */
+body {
+  font-family: 'Inter', sans-serif;
+  background: #cde8f0;
+  color: #0f2027;
+  line-height: 1.7;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
 
-  <nav id="navbar">
-    <div class="nav-logo">Yash Surve</div>
-    <div class="nav-links">
-      <a href="#about">About</a>
-      <a href="#skills">Skills</a>
-      <a href="#experience">Experience</a>
-      <a href="#education">Education</a>
-      <a href="#certifications">Certifications</a>
-      <a href="#contact" class="nav-cta">Contact</a>
-    </div>
-  </nav>
+/* ─────────────────────────────
+   GRADIENT BACKGROUND LAYER
+───────────────────────────── */
+.bg-layer {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
 
-  <main class="content">
+.orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(90px);
+  opacity: 0.6;
+  will-change: transform;
+  transition: transform 0.15s ease-out;
+}
 
-    <!-- HERO -->
-    <section class="hero">
-      <div class="eyebrow"><span></span> Open to internships 2025</div>
-      <h1>Building with data,<br>curious by <em>nature.</em></h1>
-      <p class="hero-sub">
-        Computer Engineering student at DY Patil Technical Campus, Pune —
-        exploring Python, SQL, and data analytics to turn raw data into real decisions.
-      </p>
-      <div class="hero-btns">
-        <a href="mailto:surveyash2005@gmail.com" class="btn-primary">Get in touch</a>
-        <a href="https://www.linkedin.com/in/yashhsurve" target="_blank" class="btn-outline">LinkedIn</a>
-        <a href="https://yashhsurve.github.io/" target="_blank" class="btn-outline">My Website</a>
-      </div>
-      <div class="hero-stats">
-        <div class="stat"><span class="stat-num">1</span><span class="stat-label">Internship</span></div>
-        <div class="stat"><span class="stat-num">3</span><span class="stat-label">Certifications</span></div>
-        <div class="stat"><span class="stat-num">2nd yr</span><span class="stat-label">BE Student</span></div>
-        <div class="stat"><span class="stat-num">Pune</span><span class="stat-label">Maharashtra</span></div>
-      </div>
-    </section>
+.orb1 {
+  width: 550px;
+  height: 550px;
+  background: #a8d5ba;
+  top: -120px;
+  left: -120px;
+}
 
-    <!-- ABOUT -->
-    <section id="about">
-      <div class="section-label">About</div>
-      <h2 class="section-title">Who I am</h2>
-      <p class="section-sub">A brief look at my background and what drives me.</p>
-      <div class="about-grid">
-        <div class="glass-card">
-          <h4>Background</h4>
-          <p>Pursuing BE in Computer Engineering at DY Patil Technical Campus, Pune, after my Diploma from Sahyadri Polytechnic, Sawarde.</p>
-        </div>
-        <div class="glass-card">
-          <h4>What I'm building</h4>
-          <p>Strengthening my Python, SQL, and Power BI skills — working toward a career in data analytics and data science.</p>
-        </div>
-        <div class="glass-card">
-          <h4>Work experience</h4>
-          <p>Interned at Persistent Technology as a WordPress Developer, applying concepts to live client web projects.</p>
-        </div>
-        <div class="glass-card">
-          <h4>My goal</h4>
-          <p>Use data to drive meaningful decisions — as a data analyst or data scientist in a collaborative team environment.</p>
-        </div>
-      </div>
-    </section>
+.orb2 {
+  width: 480px;
+  height: 480px;
+  background: #b0c9f5;
+  bottom: -100px;
+  right: -100px;
+}
 
-    <!-- SKILLS -->
-    <section id="skills">
-      <div class="section-label">Skills</div>
-      <h2 class="section-title">What I work with</h2>
-      <p class="section-sub">Tools and technologies I've been building on.</p>
-      <div class="skills-wrap">
-        <span class="skill">Python</span>
-        <span class="skill">SQL</span>
-        <span class="skill">Power BI</span>
-        <span class="skill">Data Analysis</span>
-        <span class="skill">WordPress</span>
-        <span class="skill">HTML &amp; CSS</span>
-        <span class="skill">Microsoft AI</span>
-        <span class="skill">Web Design</span>
-        <span class="skill dim">Problem Solving</span>
-        <span class="skill dim">Communication</span>
-      </div>
-    </section>
+.orb3 {
+  width: 360px;
+  height: 360px;
+  background: #f5c2d5;
+  top: 45%;
+  left: 35%;
+}
 
-    <!-- EXPERIENCE -->
-    <section id="experience">
-      <div class="section-label">Experience</div>
-      <h2 class="section-title">Where I've worked</h2>
-      <p class="section-sub">Real-world experience applying my skills.</p>
-      <div class="exp-card glass-card">
-        <div class="exp-icon">💻</div>
-        <div class="exp-body">
-          <div class="exp-header">
-            <div>
-              <div class="exp-title">WordPress Developer Intern</div>
-              <div class="exp-company">Persistent Technology · Chiplun, Maharashtra</div>
-            </div>
-            <div class="exp-date">Jun – Jul 2024</div>
-          </div>
-          <p class="exp-desc">
-            Built responsive WordPress pages and UI/UX layouts for real client projects.
-            Improved site functionality and applied web design principles in a professional environment.
-          </p>
-          <div class="exp-tags">
-            <span>WordPress</span>
-            <span>HTML</span>
-            <span>CSS</span>
-            <span>Web Design</span>
-            <span>UI/UX</span>
-          </div>
-        </div>
-      </div>
-    </section>
+.cursor-glow {
+  position: absolute;
+  width: 350px;
+  height: 350px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(190, 225, 255, 0.55) 0%, transparent 70%);
+  filter: blur(60px);
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  transition: left 0.06s ease-out, top 0.06s ease-out;
+}
 
-    <!-- EDUCATION -->
-    <section id="education">
-      <div class="section-label">Education</div>
-      <h2 class="section-title">Academic background</h2>
-      <p class="section-sub">My formal education journey.</p>
-      <div class="edu-list">
-        <div class="edu-item glass-card">
-          <div>
-            <div class="edu-degree">BE — Computer Engineering</div>
-            <div class="edu-school">DY Patil Technical Campus, Pune</div>
-          </div>
-          <div class="edu-year">2025 – 2028</div>
-        </div>
-        <div class="edu-item glass-card">
-          <div>
-            <div class="edu-degree">Diploma — Computer Engineering</div>
-            <div class="edu-school">Sahyadri Polytechnic, Sawarde</div>
-          </div>
-          <div class="edu-year">2022 – 2025</div>
-        </div>
-        <div class="edu-item glass-card">
-          <div>
-            <div class="edu-degree">SSC — High School</div>
-            <div class="edu-school">Shree Dev Gopalkrushna Madhyamic Vidyamandir, Guhagar</div>
-          </div>
-          <div class="edu-year">2015 – 2022</div>
-        </div>
-      </div>
-    </section>
+/* ─────────────────────────────
+   NAVBAR
+───────────────────────────── */
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 3rem;
+  background: rgba(255, 255, 255, 0.35);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.55);
+}
 
-    <!-- CERTIFICATIONS -->
-    <section id="certifications">
-      <div class="section-label">Certifications</div>
-      <h2 class="section-title">What I've earned</h2>
-      <p class="section-sub">Credentials that validate my learning.</p>
-      <div class="cert-grid">
-        <div class="cert-card glass-card">
-          <div class="cert-icon">🤖</div>
-          <div>
-            <div class="cert-name">Microsoft Certified: Fundamental AI Concepts</div>
-            <div class="cert-issuer">Microsoft</div>
-          </div>
-        </div>
-        <div class="cert-card glass-card">
-          <div class="cert-icon">📊</div>
-          <div>
-            <div class="cert-name">Power BI Workshop</div>
-            <div class="cert-issuer">Workshop Certificate</div>
-          </div>
-        </div>
-        <div class="cert-card glass-card">
-          <div class="cert-icon">🐍</div>
-          <div>
-            <div class="cert-name">3 Days Python Bootcamp</div>
-            <div class="cert-issuer">Bootcamp Certificate</div>
-          </div>
-        </div>
-      </div>
-    </section>
+.nav-logo {
+  font-size: 15px;
+  font-weight: 600;
+  color: #0f2027;
+  letter-spacing: -0.3px;
+}
 
-    <!-- CONTACT CTA -->
-    <section id="contact">
-      <div class="cta-box">
-        <h3>Let's connect</h3>
-        <p>Actively looking for internship opportunities in data analytics, data science, and web development.</p>
-        <a href="mailto:surveyash2005@gmail.com" class="btn-white">Email me →</a>
-      </div>
-    </section>
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
 
-    <footer>
-      <p>© 2026 Yash Surve &nbsp;·&nbsp; Built with care &nbsp;·&nbsp; Pune, Maharashtra, India</p>
-    </footer>
+.nav-links a {
+  font-size: 13px;
+  color: #3a5068;
+  text-decoration: none;
+  font-weight: 400;
+  transition: color 0.2s;
+}
 
-  </main>
+.nav-links a:hover {
+  color: #2d6a4f;
+}
 
-  <script src="script.js"></script>
-</body>
-</html>
+.nav-links a.nav-cta {
+  background: #2d6a4f;
+  color: #fff;
+  padding: 7px 16px;
+  border-radius: 7px;
+  font-weight: 500;
+}
+
+.nav-links a.nav-cta:hover {
+  opacity: 0.85;
+  color: #fff;
+}
+
+/* ─────────────────────────────
+   CONTENT WRAPPER
+───────────────────────────── */
+.content {
+  position: relative;
+  z-index: 1;
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  padding-top: 80px; /* offset for fixed nav */
+}
+
+/* ─────────────────────────────
+   GLASS CARD
+───────────────────────────── */
+.glass-card {
+  background: rgba(255, 255, 255, 0.48);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.72);
+  border-radius: 14px;
+  padding: 1.25rem 1.5rem;
+}
+
+/* ─────────────────────────────
+   SECTION SHARED STYLES
+───────────────────────────── */
+section {
+  padding: 4rem 0 1rem;
+}
+
+.section-label {
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1.3px;
+  color: #2d6a4f;
+  margin-bottom: 0.6rem;
+}
+
+.section-title {
+  font-size: 1.75rem;
+  font-weight: 600;
+  letter-spacing: -0.5px;
+  color: #0f2027;
+  margin-bottom: 0.4rem;
+}
+
+.section-sub {
+  font-size: 14px;
+  color: #3a5068;
+  margin-bottom: 1.75rem;
+}
+
+/* ─────────────────────────────
+   HERO
+───────────────────────────── */
+.hero {
+  padding: 5rem 0 2rem;
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 11px;
+  font-weight: 600;
+  color: #2d6a4f;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  margin-bottom: 1.2rem;
+}
+
+.eyebrow span {
+  width: 22px;
+  height: 1.5px;
+  background: #2d6a4f;
+  display: inline-block;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  font-weight: 600;
+  line-height: 1.18;
+  letter-spacing: -1px;
+  color: #0f2027;
+  margin-bottom: 1rem;
+}
+
+.hero h1 em {
+  font-style: normal;
+  color: #2d6a4f;
+}
+
+.hero-sub {
+  font-size: 16px;
+  color: #3a5068;
+  max-width: 500px;
+  line-height: 1.65;
+  margin-bottom: 1.8rem;
+}
+
+.hero-btns {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 2.5rem;
+}
+
+.btn-primary {
+  padding: 11px 24px;
+  background: #2d6a4f;
+  color: #fff;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: opacity 0.2s;
+}
+
+.btn-primary:hover {
+  opacity: 0.85;
+}
+
+.btn-outline {
+  padding: 11px 24px;
+  background: rgba(255, 255, 255, 0.5);
+  color: #2d6a4f;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 500;
+  text-decoration: none;
+  border: 1.5px solid #2d6a4f;
+  transition: background 0.2s;
+}
+
+.btn-outline:hover {
+  background: rgba(255, 255, 255, 0.75);
+}
+
+.hero-stats {
+  display: flex;
+  gap: 2.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.stat {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.stat-num {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #0f2027;
+}
+
+.stat-label {
+  font-size: 12px;
+  color: #3a5068;
+}
+
+/* ─────────────────────────────
+   ABOUT
+───────────────────────────── */
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.about-grid h4 {
+  font-size: 12px;
+  font-weight: 500;
+  color: #3a5068;
+  margin-bottom: 6px;
+}
+
+.about-grid p {
+  font-size: 13.5px;
+  color: #1a2e3a;
+  line-height: 1.6;
+}
+
+/* ─────────────────────────────
+   SKILLS
+───────────────────────────── */
+.skills-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.skill {
+  background: rgba(45, 106, 79, 0.13);
+  color: #1a4731;
+  padding: 7px 16px;
+  border-radius: 100px;
+  font-size: 13px;
+  font-weight: 500;
+  border: 1px solid rgba(45, 106, 79, 0.22);
+}
+
+.skill.dim {
+  background: rgba(255, 255, 255, 0.42);
+  color: #3a5068;
+  border-color: rgba(0, 0, 0, 0.1);
+}
+
+/* ─────────────────────────────
+   EXPERIENCE
+───────────────────────────── */
+.exp-card {
+  display: flex;
+  gap: 1.1rem;
+  align-items: flex-start;
+}
+
+.exp-icon {
+  font-size: 22px;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.exp-body {
+  flex: 1;
+}
+
+.exp-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 0.5rem;
+}
+
+.exp-title {
+  font-size: 15px;
+  font-weight: 600;
+  color: #0f2027;
+}
+
+.exp-company {
+  font-size: 13px;
+  color: #3a5068;
+  margin-top: 2px;
+}
+
+.exp-date {
+  font-size: 12px;
+  color: #3a5068;
+  white-space: nowrap;
+}
+
+.exp-desc {
+  font-size: 13.5px;
+  color: #1a2e3a;
+  line-height: 1.6;
+  margin-bottom: 0.75rem;
+}
+
+.exp-tags {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.exp-tags span {
+  font-size: 11px;
+  background: rgba(45, 106, 79, 0.1);
+  color: #1a4731;
+  padding: 3px 10px;
+  border-radius: 100px;
+  font-weight: 500;
+}
+
+/* ─────────────────────────────
+   EDUCATION
+───────────────────────────── */
+.edu-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.edu-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.edu-degree {
+  font-size: 14px;
+  font-weight: 600;
+  color: #0f2027;
+}
+
+.edu-school {
+  font-size: 13px;
+  color: #3a5068;
+  margin-top: 3px;
+}
+
+.edu-year {
+  font-size: 12px;
+  color: #3a5068;
+  white-space: nowrap;
+}
+
+/* ─────────────────────────────
+   CERTIFICATIONS
+───────────────────────────── */
+.cert-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.cert-card {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+}
+
+.cert-icon {
+  font-size: 22px;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.cert-name {
+  font-size: 13px;
+  font-weight: 500;
+  color: #0f2027;
+}
+
+.cert-issuer {
+  font-size: 12px;
+  color: #3a5068;
+  margin-top: 3px;
+}
+
+/* ─────────────────────────────
+   CTA / CONTACT
+───────────────────────────── */
+.cta-box {
+  background: rgba(45, 106, 79, 0.82);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: 18px;
+  padding: 3rem 2rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 3rem;
+}
+
+.cta-box h3 {
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #fff;
+}
+
+.cta-box p {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.85);
+  max-width: 380px;
+  line-height: 1.6;
+}
+
+.btn-white {
+  background: #fff;
+  color: #2d6a4f;
+  padding: 11px 26px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: opacity 0.2s;
+}
+
+.btn-white:hover {
+  opacity: 0.88;
+}
+
+/* ─────────────────────────────
+   FOOTER
+───────────────────────────── */
+footer {
+  text-align: center;
+  padding: 2.5rem 0 3rem;
+  font-size: 12px;
+  color: #3a5068;
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
+  margin-top: 4rem;
+}
+
+/* ─────────────────────────────
+   RESPONSIVE
+───────────────────────────── */
+@media (max-width: 640px) {
+  nav {
+    padding: 1rem 1.25rem;
+  }
+
+  .nav-links {
+    gap: 1rem;
+  }
+
+  .nav-links a:not(.nav-cta) {
+    display: none;
+  }
+
+  .content {
+    padding: 0 1.25rem;
+    padding-top: 70px;
+  }
+
+  .hero h1 {
+    font-size: 2.1rem;
+  }
+
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .cert-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-stats {
+    gap: 1.5rem;
+    flex-wrap: wrap;
+  }
+
+  .exp-header {
+    flex-direction: column;
+    gap: 4px;
+  }
+}
